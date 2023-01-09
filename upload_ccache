@@ -11,9 +11,5 @@ com ()
 time com ccache 1 # Compression level 1, its enough
 
 mkdir -p ~/.config/rclone
-echo "$rclone_config" > [rombuildersimp]
-type = drive
-scope = drive
-token = {"access_token":"ya29.a0AX9GBdW5I9V7mQ425GbTjolv0P29k-n9kidfLJPptVZAaykskNWZc6mTZAfVL13oEAmi1o4EPFrPQYFk-uUjvs955y547BwsgkgVoQZ5xXSc1uCcc6whU2PAW1U5RP_w-QwGLGcKCChkjv02LYD9WQb5rGyuaCgYKAV0SARISFQHUCsbCryvSPooAqRdCkRRlAuRzhA0163","token_type":"Bearer","refresh_token":"1//03w00Ap-2eytECgYIARAAGAMSNwF-L9IrConHjVtNB5DzUJ6tfx4p8Ewx6JpZimonYsQVku3Lo1AJkcuMvmiczCxPiXA-rj-tbxE","expiry":"2023-01-06T13:59:13.0947926+03:00"}
-team_drive =  # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
+echo "$rclone_config" > ................... # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
 time rclone copy ccache.tar.gz rombuildersimp:ccache/ci2 -P # apon is my rclone config name (first line without [] of ~/.config/rclone/rclone.conf file from rclone setupped pc), ccache/ci2 is where ccache will be saved in my cloud, use yours one
