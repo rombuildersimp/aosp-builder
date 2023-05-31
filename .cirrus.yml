@@ -7,7 +7,7 @@ env:
 task:
   name: Test
   skip: $CIRRUS_BRANCH == 'main'
-  only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
+  #only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
   timeout_in: 2m
   persistent_worker:
     labels:
@@ -25,7 +25,7 @@ task:
 task:
   name: Build
   skip: $CIRRUS_BRANCH == 'main'
-  only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
+  #only_if: $CIRRUS_REPO_OWNER == 'ROM-builders'
   depends_on: Test
   timeout_in: 4h
   persistent_worker:
